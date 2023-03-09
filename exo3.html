@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>exo3_JavaScript</title>
+	</head>
+<body>
+    <script type="text/javaScript">
+
+
+      function palalindrome(mot) {
+        var i
+        for(i=0; i < chaine.lenght; i++ ) {
+            if(chaine[i].match([/^a-zA-Z/])){
+                return false}
+       }
+      if (mot.length === 0 || mot.length === 1) {
+    return true;
+  }
+  
+  for (let i = 0; i < mot.length / 2; i++) {
+    if (mot[i] !== mot[mot.length - 1 - i]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+
+function trierAlphabetiquement(chaine) {
+  
+  let chars = .split('').sort();
+
+  return chars.join('');
+}
+
+
+function trouverMotPlusCourt(chaine) {
+  
+  const mots = chaine.split(" ");
+  let motPlusCourt = null;
+  mots.forEach(function(mot, index) {
+    if (motPlusCourt === null || mot.length < motPlusCourt.length) {
+      motPlusCourt = mot;
+    }
+  });
+  const position = mots.indexOf(motPlusCourt) + 1; 
+  return `Le mot le plus court est "${motPlusCourt}" et sa position est ${position}.`;
+}
+
+
+function inverseCase(phrase) {
+  var newPhrase = "";
+  for (var i = 0; i < phrase.length; i++) {
+    var char = phrase.charAt(i);
+    if (char == char.toUpperCase()) {
+      newPhrase += char.toLowerCase();
+    } else {
+      newPhrase += char.toUpperCase();
+    }
+  }
+  return newPhrase;
+}
+
+
+
+    </script>
+    
+</body>
+</html>
